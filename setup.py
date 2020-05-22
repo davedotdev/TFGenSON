@@ -14,20 +14,20 @@ def get_long_docs(*filenames):
 
 setup(
     name='genson',
-    version='1.2.1',
+    version='1.2.1a',
     description='GenSON is a powerful, user-friendly JSON Schema generator.',
     long_description=get_long_docs('README.rst', 'HISTORY.rst', 'AUTHORS.rst'),
     keywords=['json', 'schema', 'json-schema', 'jsonschema', 'object',
               'generate', 'generator', 'builder', 'merge',
               'draft 7', 'validate', 'validation'],
     url='https://github.com/wolverdude/genson/',
-    download_url='https://github.com/wolverdude/GenSON/tarball/v0.2s.0',
+    download_url='https://github.com/davedotdev/TFGenSON/tarball/v1.2.1a',
     license='MIT',
-    author='Jon Wolverton',
-    author_email='wolverton' '.' 'jr' '@' 'gmail' '.' 'com',
-    packages=['genson'],
+    author='Jon Wolverton, David Gee',
+    author_email='me' '@' 'dave' '.' 'dev',
+    packages=['tfgenson'],
     include_package_data=True,
-    entry_points={'console_scripts': ['genson = genson.cli:main']},
+    entry_points={'console_scripts': ['tfgenson = genson.cli:main']},
     zip_safe=True,
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -49,8 +49,4 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Utilities',
     ],
-    tests_require=[
-        'jsonschema>=3.0.1',
-    ],
-    test_suite='test',
 )
