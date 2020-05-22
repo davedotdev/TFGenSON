@@ -27,7 +27,7 @@ setup(
     author_email='me' '@' 'dave' '.' 'dev',
     packages=['tfgenson'],
     include_package_data=True,
-    entry_points={'console_scripts': ['tfgenson = genson.cli:main']},
+    entry_points={'console_scripts': ['tfgenson = tfgenson.cli:main']},
     zip_safe=True,
     classifiers=[
         'Development Status :: 5 - Production/Stable',
