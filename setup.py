@@ -13,7 +13,7 @@ def get_long_docs(*filenames):
 
 
 setup(
-    name='genson',
+    name='tfgenson',
     version='1.2.1a',
     description='GenSON is a powerful, user-friendly JSON Schema generator.',
     long_description=get_long_docs('README.rst', 'HISTORY.rst', 'AUTHORS.rst'),
