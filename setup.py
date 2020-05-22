@@ -47,5 +47,5 @@ setup(
         'Topic :: Software Development :: Code Generators',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Utilities',
-    ],
+    ]
 )
