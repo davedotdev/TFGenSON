@@ -28,7 +28,7 @@ class Object(SchemaStrategy):
     def add_schema(self, schema):
         super(Object, self).add_schema(schema)
         if 'properties' in schema:
-            for prop, subschema in schema['properties'].items():
+            for prop, subschema in schema['properties'].items(): 
                 subnode = self._properties[prop]
                 if subschema is not None:
                     subnode.add_schema(subschema)
@@ -37,6 +37,7 @@ class Object(SchemaStrategy):
                 subnode = self._pattern_properties[pattern]
                 if subschema is not None:
                     subnode.add_schema(subschema)
+        
         if 'required' in schema:
             required = set(schema['required'])
             if not required:
@@ -46,24 +47,32 @@ class Object(SchemaStrategy):
             else:
                 self._required &= required
 
-    def add_object(self, obj):
+    def add_object(self, obj, dorequired): 
+        self.doRequired = dorequired
+        self.doRequiredNext = self.doRequired
         properties = set()
         for prop, subobj in obj.items():
+            print("PROP IS : ", prop, "doRequired is: ", self.doRequired)
+            if prop == "config-group-name":
+                self.doRequiredNext = False
             pattern = None
 
             if prop not in self._properties:
                 pattern = self._matching_pattern(prop)
 
             if pattern is not None:
-                self._pattern_properties[pattern].add_object(subobj)
+                self._pattern_properties[pattern].add_object(subobj, self.doRequiredNext)
             else:
                 properties.add(prop)
-                self._properties[prop].add_object(subobj)
+                self._properties[prop].add_object(subobj, self.doRequiredNext) 
 
-        if self._required is None:
-            self._required = properties
+        if self.doRequired == True:
+            if self._required is None:
+                self._required = properties
+            else:
+                self._required &= properties
         else:
-            self._required &= properties
+            self._required = None
 
     def _matching_pattern(self, prop):
         for pattern in self._pattern_properties.keys():

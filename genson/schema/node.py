@@ -36,7 +36,7 @@ class SchemaNode(object):
         # return self for easy method chaining
         return self
 
-    def add_object(self, obj):
+    def add_object(self, obj, dorequired):
         """
         Modify the schema to accommodate an object.
 
@@ -47,7 +47,7 @@ class SchemaNode(object):
 
         # delegate to SchemaType object
         active_strategy = self._get_strategy_for_object(obj)
-        active_strategy.add_object(obj)
+        active_strategy.add_object(obj, dorequired)
 
         # return self for easy method chaining
         return self
@@ -122,7 +122,7 @@ class SchemaNode(object):
                 if self._active_strategies and \
                         isinstance(self._active_strategies[-1], Typeless):
                     typeless = self._active_strategies.pop()
-                    active_strategy.add_schema(typeless.to_schema())
+                    active_strategy.add_schema(typeless.to_schema(), True)
 
                 self._active_strategies.append(active_strategy)
                 return active_strategy

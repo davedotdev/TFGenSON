@@ -73,7 +73,7 @@ class Number(SchemaStrategy):
         if schema.get('type') == 'number':
             self._type = 'number'
 
-    def add_object(self, obj):
+    def add_object(self, obj, dorequired):
         if isinstance(obj, float):
             self._type = 'number'
 

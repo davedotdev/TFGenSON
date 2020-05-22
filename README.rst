@@ -1,5 +1,11 @@
-GenSON
+TFGenSON
 ======
+
+**Warning** This is a modified version of GenSON. This version specifically only adds 'required' fields to the top three objects: resources->name->config-group-name. This version accepts a specific type of input designed for arbitrary use with TF schema canonical objects. It probably won't be useful to anyone else, ever.
+
+None of the tests have been modified to cope so don't expect them to work either. Maybe I'll sort this further down the line.
+
+ORIGINAL TEXT BELOW
 
 **GenSON** is a powerful, user-friendly `JSON Schema`_ generator built in Python.
 
