@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
     name="tfgenson-davedotdev",
-    version="1.2.1a0",
+    version="1.2.1a1",
     description="TFGenSON is a powerful, user-friendly JSON Schema generator.",
     keywords=['json', 'schema', 'json-schema', 'jsonschema', 'object',
               'generate', 'generator', 'builder', 'merge',
