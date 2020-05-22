@@ -52,7 +52,6 @@ class Object(SchemaStrategy):
         self.doRequiredNext = self.doRequired
         properties = set()
         for prop, subobj in obj.items():
-            print("PROP IS : ", prop, "doRequired is: ", self.doRequired)
             if prop == "config-group-name":
                 self.doRequiredNext = False
             pattern = None
