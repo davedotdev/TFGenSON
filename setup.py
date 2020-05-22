@@ -15,7 +15,7 @@ def get_long_docs(*filenames):
 setup(
     name='tfgenson',
     version='1.2.1a',
-    description='GenSON is a powerful, user-friendly JSON Schema generator.',
+    description='TFGenSON is a powerful, user-friendly JSON Schema generator.',
     long_description=get_long_docs('README.rst', 'HISTORY.rst', 'AUTHORS.rst'),
     keywords=['json', 'schema', 'json-schema', 'jsonschema', 'object',
               'generate', 'generator', 'builder', 'merge',
@@ -27,7 +27,6 @@ setup(
     author_email='me' '@' 'dave' '.' 'dev',
     packages=['tfgenson'],
     include_package_data=True,
-    entry_points={'console_scripts': ['tfgenson = tfgenson.cli:main']},
     zip_safe=True,
     classifiers=[
         'Development Status :: 5 - Production/Stable',
