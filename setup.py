@@ -9,7 +9,7 @@ setuptools.setup(
               'generate', 'generator', 'builder', 'merge',
               'draft 7', 'validate', 'validation'],
     url="https://github.com/davedotdev/tfgenson/",
-    download_url="https://github.com/davedotdev/TFGenSON/tarball/v1.2.1a",
+    download_url="https://github.com/davedotdev/TFGenSON/tarball/v1.2.1a1",
     license="MIT",
     author="Jon Wolverton, David Gee",
     author_email="me@dave.dev",
