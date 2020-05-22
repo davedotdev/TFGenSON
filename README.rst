@@ -5,6 +5,13 @@ TFGenSON
 
 None of the tests have been modified to cope so don't expect them to work either. Maybe I'll sort this further down the line.
 
+Installation
+------------
+
+.. code-block:: bash
+
+    $ pip install tfgenson
+
 ORIGINAL TEXT BELOW
 
 **GenSON** is a powerful, user-friendly `JSON Schema`_ generator built in Python.
