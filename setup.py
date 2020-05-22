@@ -20,7 +20,7 @@ setup(
     keywords=['json', 'schema', 'json-schema', 'jsonschema', 'object',
               'generate', 'generator', 'builder', 'merge',
               'draft 7', 'validate', 'validation'],
-    url='https://github.com/wolverdude/genson/',
+    url='https://github.com/davedotdev/tfgenson/',
     download_url='https://github.com/davedotdev/TFGenSON/tarball/v1.2.1a',
     license='MIT',
     author='Jon Wolverton, David Gee',
